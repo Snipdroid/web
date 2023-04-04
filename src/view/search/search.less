@@ -1,0 +1,89 @@
+table {
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+  border: 1px solid var(--foregroundPrimary);
+  border-radius: 24px;
+  margin-top: 104px;
+  border-spacing: 0;
+
+  tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    text-align-last: left;
+  }
+
+  thead {
+    height: 48px;
+    background-color: var(--cutoutColor);
+    color: var(--foregroundPrimary);
+
+    th:first-child {
+      width: 60px;
+    }
+
+    th:last-child {
+      width: 100px;
+    }
+
+    tr {
+      height: 100%;
+    }
+  }
+
+  tbody {
+    display: block;
+    width: inherit;
+    overflow-y: auto;
+
+    tr {
+      height: 50px;
+      border-bottom: 1px solid var(--foregroundPrimary);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      td {
+        box-sizing: border-box;
+        padding-right: 16px;
+        white-space: nowrap;
+      }
+
+      td:first-child {
+        width: 60px;
+        text-align-last: center;
+      }
+
+      td:last-child {
+        width: 100px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      overflow: hidden;
+      width: 100%;
+      color: var(--foregroundPrimary);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .detail {
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      color: var(--hover);
+    }
+  }
+}
+
+.page-indicator {
+  margin-top: 16px;
+  margin-left: auto;
+}

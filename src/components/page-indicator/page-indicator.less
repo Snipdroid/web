@@ -1,0 +1,33 @@
+.page-indicator {
+  display: flex;
+  width: min-content;
+  align-items: center;
+
+  button {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+
+  span {
+    color: var(--foregroundPrimary);
+
+    &.btn {
+      cursor: pointer;
+      transition: all 0.3s;
+
+      &:hover {
+        color: var(--hover);
+      }
+    }
+
+    &.content {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19px;
+    }
+  }
+}
