@@ -3,7 +3,7 @@ import React, { FC, useState } from 'react';
 
 import styles from './counter.module.less';
 import { store } from '@/store';
-import { ShieldDone } from 'react-iconly';
+import { FaAsterisk } from 'react-icons/fa';
 
 export const Counter: FC = () => {
   const count = store.use.count();
@@ -19,8 +19,9 @@ export const Counter: FC = () => {
       >
         -
       </Button>
-      <ShieldDone set="bold" primaryColor="blueviolet" />
-      {count}
+      {[...new Array(count)].map((index) => (
+        <FaAsterisk size="50" color={'deeppink'} key={index} />
+      ))}
       <Button
         auto
         onClick={() => {

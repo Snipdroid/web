@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "dev": "vite",
-    "build": "rimraf dist && vite build"
+    "build": "rimraf dist && vite build",
+    "preview": "vite preview",
+    "lint": "eslint --ext \".tsx,.ts\" src/",
+    "lint:fix": "eslint --fix --ext \".tsx,.ts\" src/"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +18,7 @@
     "@vitejs/plugin-react": "^4.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-iconly": "^2.2.10",
+    "react-icons": "^4.10.1",
     "swr": "^2.2.0",
     "zustand": "^4.3.9"
   },
