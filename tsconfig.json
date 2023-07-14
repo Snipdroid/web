@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "jsx": "react",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "types": [
+      "node"
+    ],
+    "rootDir": "./src",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "lib": [
+      "ESNext",
+      "DOM",
+    ],
+    "strict": true,
+    "noImplicitReturns": true,
+    "skipLibCheck": true,
+    "noImplicitAny": false,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    }
+  },
+  "plugins": [
+    {
+      "name": "typescript-plugin-css-modules"
+    }
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  },
+  "include": [
+    "src",
+    "less-module.d.ts"
+  ],
+  "exclude": [
+    "*/node_modules/*"
+  ],
+}
