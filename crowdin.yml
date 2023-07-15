@@ -1,0 +1,5 @@
+commit_message: "chore: sync %language% translation from Crowdin"
+append_commit_message: false
+files:
+  - source: /src/i18n/default.json
+    translation: /src/i18n/%two_letters_code%.json
