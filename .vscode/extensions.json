@@ -3,5 +3,6 @@
     "esbenp.prettier-vscode",
     "rvest.vs-code-prettier-eslint",
     "clinyong.vscode-css-modules",
+    "antfu.unocss"
   ]
 }
