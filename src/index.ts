@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client';
 import { App } from './app';
 import './i18n';
 
+import './index.scss';
+
 const domNode = document.getElementById('root');
 if (domNode) {
   const root = createRoot(domNode);

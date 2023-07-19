@@ -1,9 +1,9 @@
-import { Button } from '@nextui-org/react';
+import { Button } from '@carbon/react';
 import React, { FC, useState } from 'react';
 
-import styles from './counter.module.less';
+import styles from './counter.module.scss';
 import { store } from '@/store';
-import { FaAsterisk } from 'react-icons/fa';
+import { Asterisk } from '@carbon/icons-react';
 
 export const Counter: FC = () => {
   const count = store.use.count();
@@ -12,18 +12,16 @@ export const Counter: FC = () => {
   return (
     <div className={styles.counter}>
       <Button
-        auto
         onClick={() => {
           dec();
         }}
       >
         -
       </Button>
-      {[...new Array(count)].map((index) => (
-        <FaAsterisk size="50" color={'deeppink'} key={index} />
+      {[...new Array(Math.max(0, count))].map((_, index) => (
+        <Asterisk size="32" color={'deeppink'} key={index} />
       ))}
       <Button
-        auto
         onClick={() => {
           inc();
         }}
