@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client';
 import { App } from './app';
 import './i18n';
 
+import 'virtual:uno.css';
 import './index.scss';
 
 const domNode = document.getElementById('root');

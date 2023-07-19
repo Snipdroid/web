@@ -7,11 +7,11 @@ import { useTranslation } from 'react-i18next';
 export const Home: FC = () => {
   const { t } = useTranslation();
   return (
-    <>
+    <div className="bg-lightBlue pl-10">
       <h1>{t('projectName')}</h1>
       <Counter />
       <LangSelector />
       <LatinToy />
-    </>
+    </div>
   );
 };
