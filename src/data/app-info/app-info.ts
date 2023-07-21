@@ -6,13 +6,15 @@ import { Arguments } from 'swr';
 export function useAppInfoList(
   query: string,
   pageSize: number,
-  queryType: 'regex' | 'string' = 'string'
+  queryType: 'regex' | 'q' = 'q'
 ) {
   const getKey: SWRInfiniteKeyLoader<any, Arguments> = useCallback(
     (pageIndex) => {
-      return queryType === 'string'
-        ? `/api/appinfo?q=${query}&per=${pageSize}&page=${pageIndex}`
-        : `/api/appinfo?regex=${query}&per=${pageSize}&page=${pageIndex}`;
+      let param = new URLSearchParams();
+      param.append('per', pageSize.toString());
+      param.append('page', (pageIndex + 1).toString());
+      param.append(queryType, query);
+      return `/api/appinfo?${param}`;
     },
     [queryType, pageSize, query]
   );

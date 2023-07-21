@@ -1,5 +1,3 @@
-import useSWR from 'swr';
-
 export interface AppInfoRequest {
   /**
    * 页码
@@ -20,14 +18,14 @@ export interface AppInfoRequest {
 }
 
 export interface AppInfoResponse {
-  items: Item[];
+  items: AppInfoItem[];
   /**
    * 分页数据
    */
   metadata: Metadata;
 }
 
-export interface Item {
+export interface AppInfoItem {
   /**
    * 启动项
    */
