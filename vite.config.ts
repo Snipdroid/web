@@ -4,7 +4,14 @@ import UnoCSS from 'unocss/vite';
 import checker from 'vite-plugin-checker';
 import tsconfigPaths from 'vite-tsconfig-paths';
 
-const baseUrl = loadEnv('development', process.cwd()).VITE_API;
+const res = loadEnv(process.env.NODE_ENV!, process.cwd());
+console.log(
+  `%c res  >>> 🦁️ <<< ${new Date().toLocaleString()} `,
+  'background-color: #6bc047; color: #fff; border-radius:7px; font-size:14px; padding: 4px',
+  res,
+  process.env.NODE_ENV,
+  process.cwd()
+);
 
 export default defineConfig({
   build: {
@@ -21,13 +28,6 @@ export default defineConfig({
   ],
   server: {
     port: 6800,
-    proxy: {
-      '/api': {
-        target: baseUrl,
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
-      },
-    },
   },
   css: {
     modules: {

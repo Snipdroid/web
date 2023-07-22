@@ -5,14 +5,19 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "baseUrl": ".",
-    "types": ["node"],
+    "types": [
+      "node"
+    ],
     "rootDir": "./src",
     "resolveJsonModule": true,
     "sourceMap": true,
     "isolatedModules": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
+    "lib": [
+      "ESNext",
+      "DOM"
+    ],
     "strict": true,
     "noImplicitReturns": true,
     "skipLibCheck": true,
@@ -20,7 +25,9 @@
     "strictNullChecks": true,
     "strictPropertyInitialization": false,
     "paths": {
-      "@/*": ["src/*"]
+      "@/*": [
+        "src/*"
+      ]
     }
   },
   "plugins": [
@@ -33,6 +40,11 @@
       "module": "CommonJS"
     }
   },
-  "include": ["src", "custom-module.d.ts"],
-  "exclude": ["*/node_modules/*"]
+  "include": [
+    "src",
+    "custom.d.ts"
+  ],
+  "exclude": [
+    "*/node_modules/*"
+  ]
 }
