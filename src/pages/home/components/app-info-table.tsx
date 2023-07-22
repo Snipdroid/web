@@ -96,7 +96,7 @@ export const AppInfoTable = () => {
   }, [allDataLoaded, isValidating, data]);
 
   return (
-    <div className="w-200" style={{ width: '800px' }}>
+    <div className="w-200">
       <DataTable
         key={searchValue}
         rows={flattenedData}
@@ -124,10 +124,6 @@ export const AppInfoTable = () => {
                 useZebraStyles={false}
                 size="lg"
                 key={searchValue}
-                className="overflow-hidden w-200"
-                style={{
-                  width: '800px',
-                }}
                 hidden={!data}
               >
                 <TableHead>
@@ -143,19 +139,13 @@ export const AppInfoTable = () => {
                   </TableRow>
                 </TableHead>
 
-                <TableBody className="w-200">
+                <TableBody>
                   {rows.map((row) => {
                     return (
-                      <TableRow
-                        {...getRowProps({ row })}
-                        key={row.id + `-size-${size}`}
-                      >
-                        {row.cells.map((cell, index) => {
+                      <TableRow {...getRowProps({ row })} key={row.id}>
+                        {row.cells.map((cell) => {
                           return (
-                            <TableCell
-                              className="truncate"
-                              key={cell.id + '_cell'}
-                            >
+                            <TableCell className="truncate" key={cell.id}>
                               {cell.value}
                             </TableCell>
                           );

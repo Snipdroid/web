@@ -20,7 +20,9 @@ export const Header: FC<HeaderProps> = () => {
     <div className="w-screen flex justify-center border-solid border-b border-[#E0E0E0]">
       <div className="h-12 box-border flex flex-justify-between items-center w-300">
         <div className="h-8 w-45 flex flex-justify-between items-center mr-10">
-          <div className="h-8 w-8 border-solid border border-blue bg-blue"></div>
+          <div className="h-8 w-8">
+            <img className="h-8 w-8" src="favicon.ico" alt="" />
+          </div>
           <div className="h-9 w-[123px] flex justify-center items-center text-7 font-400">
             {t('projectName')}
           </div>

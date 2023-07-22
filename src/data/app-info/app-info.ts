@@ -14,7 +14,7 @@ export function useAppInfoList(
       param.append('per', pageSize.toString());
       param.append('page', (pageIndex + 1).toString());
       param.append(queryType, query);
-      return `/api/appinfo?${param}`;
+      return `/appinfo?${param}`;
     },
     [queryType, pageSize, query]
   );
