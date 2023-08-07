@@ -38,7 +38,7 @@ export const Header: FC<HeaderProps> = () => {
             onChange={onSearchValueChange}
           ></ExpandableSearch>
         </div>
-        <div className="w-[195px] h12 flex">
+        <div className="h12 flex">
           <Button hasIconOnly={true} kind='ghost'>
             <Upload />
           </Button>
